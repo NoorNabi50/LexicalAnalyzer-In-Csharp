@@ -1,0 +1,43 @@
+﻿using DataAccessLibrary.RepositoryPattern;
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DataAccessLibrary
+{
+    internal class DatabaseManager<T> : IRepositoryPattern<T> where T : class
+    {
+        public Task<dynamic> ExecuteAsync<dynamic>(string StoredProcedureName, object @params, SqlConnection connection)
+        {
+
+        }
+
+        public Task<IEnumerable<T>> GetAllAsync(string StoredProcedureName, SqlConnection connection)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<T> GetAllByIdAsync(string StoredProcedureName, object @params, SqlConnection connection)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<int> InsertAsync(string StoredProcedureName, T model, SqlConnection connection)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<int> RemoveAsync(string StoreProcedureName, object @params, SqlConnection connection)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<int> UpdateAsync(string StoredProcedureName, T model, SqlConnection connection)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}
